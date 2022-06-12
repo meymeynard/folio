@@ -10,10 +10,20 @@ const data = [
   { number: 5000, text: 'Github Stars', }
 ];
 
+const boxes = data.map((card, index) => (
+  <Box key={index}>
+    <BoxNum>{card.number}+</BoxNum>
+    <BoxText>{card.text}</BoxText>
+  </Box>
+))
+
 const Acomplishments = () => (
-  <div>
-    Acomplishments
-  </div>
+  <Section>
+    <SectionTitle>Accomplishments</SectionTitle>
+    <Boxes>
+      {boxes}
+    </Boxes>
+  </Section>
 );
 
 export default Acomplishments;
